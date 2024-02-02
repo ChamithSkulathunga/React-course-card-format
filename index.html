@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Course</title>
+
+    <style>
+
+      body{
+        background-color: rgba(91, 137, 138, 0.216);
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        color: teal;
+        text-decoration: underline;
+      }
+
+      h2 {
+        color: brown;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      /* div {
+        background-color: rgba(91, 137, 138, 0.216);
+        border: 1px solid black;
+      } */
+
+      .course {
+        background-color: white;
+        padding: 20px;
+        margin: 20px 150px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .course:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+      }
+
+      .course img {
+        width: 100px;
+      }
+
+      /* div:hover {
+        background-color: green;
+      } */
+
+      /* .profile img {
+        width: 50px;
+      } */
+
+      #profile {
+        padding: 30px;
+        margin: 0px 30px 0px 30px;
+        border-radius: 20px;
+        background-color: salmon;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .profileData{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #profile img:first-of-type {
+        width: 200px;
+      }
+
+      #profile a {
+        text-decoration: none;
+      }
+
+      #profile a .social-icon {
+        width: 50px;
+      }
+
+      #profile:hover {
+        border-radius: 0px;
+        background-color: yellowgreen;
+      }
+
+
+      /* .profile img:nth-of-type(2) {
+        width: 50px;
+      }
+      .profile img:nth-of-type(3) {
+        width: 50px;
+      }
+      .profile img:nth-of-type(4) {
+        width: 50px;
+      }
+      .profile img:nth-of-type(5) {
+        width: 50px;
+      } */
+
+      .RegisterForm{
+        display: flex;
+      }
+
+      .RegisterForm label{
+        margin: 10px;
+      }
+
+      .RegisterForm input{
+        padding: 5px;
+        width: 200px;
+      }
+
+      .RegisterForm button{
+        margin-left: 80px;
+        width: 80px;
+      }
+
+      .inputfild{
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+        margin-left: 50px;
+        padding: 5px;
+        
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: white;
+      }
+
+      #courseRegistration p::first-letter {
+        font-size: 50px;
+      }
+
+      #courseRegistration p::first-line {
+        color: red;
+      }
+
+      #courseRegistration lable, input,
+      select {
+        /* padding: 8px; */
+        border: 1px solid;
+        margin-top: 1px; 
+      }
+
+      
+
+      input:valid {
+        border-color: #2ecc71;
+      }
+
+      input:invalid {
+        border-color: red;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 100px;
+      }
+
+      #resetButton {
+        background-color: red;
+      }
+
+      hr{
+       border: 1px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        border: 1px solid black;
+        padding: 50px;
+        margin: 100px;
+      "
+    >
+      <h1>How to Learn React</h1>
+      <h2>What is React?</h2>
+      <p>ReactJs is a JavaScript library for building user interfaces.</p>
+
+      <h2>What you'll learn</h2>
+
+      <!-- <pre>
+          1. Git
+          2. Basic HTML, CSS 
+          3. JavaScript
+          4. React and Redux
+          5. Publish
+        </pre> -->
+
+      <ol type="1">
+        <li>Git</li>
+        <li>Basic HTML, CSS and JavaScript</li>
+        <li>React and Redux</li>
+        <li>Publish</li>
+      </ol>
+
+      <!-- <ul>
+          <li>Git</li>
+          <li>Basic HTML, CSS and JavaScript</li>
+          <li>React and Redux</li>
+          <li>Publish</li>
+        </ul> -->
+
+      <h2>Course content</h2>
+
+      <table style="border-collapse: collapse">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Git</td>
+            <td>Basic HTML Syntax and elements</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>HTML and CSS</td>
+            <td>Css selectors and how to use them</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>JavaScript</td>
+            <td>Core concepts of JavaScript</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <hr />
+
+      <section>
+        <h2>More Courses from the instructor</h2>
+        <p>
+          This instructor provides a variety of courses beyond just React.
+          Explore the complete list below to discover them.
+        </p>
+
+        <div class="course">
+          
+          <div>
+            <h3>MERN Stack</h3>
+          <p>This will cover the MongoDB, Node Js and Express with React</p>
+          <p>Note: Prior knowledge of ReactJS is required.</p>
+          </div>
+
+          <img
+            alt="MERN Stack logo"
+            src="https://www.mangoitsolutions.com/wp-content/uploads/2022/01/becomeamernstackdeveloper-mobile-300x279.png"
+          />
+        </div>
+
+        <div class="course">
+         <div>
+          <h3>NEXT JS</h3>
+          <p>This will cover the SSR, SSG, API handling and Deployment</p>
+          <p>Note: Prior knowledge of ReactJS is required.</p>
+         </div>
+          <img
+            alt="Next JS logo"
+            src="https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png"
+          />
+        </div>
+        <div class="course">
+          <div>
+            <h3>GATSBY JS</h3>
+          <p>This will cover the SSR, SSG, API handling and Deployment</p>
+          <p>Note: Prior knowledge of ReactJS is required.</p>
+          </div>
+          <img
+            alt="Gatsby JS logo"
+            src="https://seeklogo.com/images/G/gatsby-logo-1A245AD37F-seeklogo.com.png"
+          />
+        </div>
+      </section>
+
+      <br>
+      <hr />
+
+      <section>
+        <h2>About the Instructor</h2>
+
+        <div id="profile">
+          <div class="profileData">
+            <h3>Chamith Sadeepa Kulathunga</h3>
+          <p>Web Developer and UI/UX Designer</p>
+
+          <div>
+            <a href="https://www.linkedin.com/in/chamith-sadeepa-kulathunga-702348196/" target="_blank">
+              <img
+                class="social-icon"
+                src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                alt="Chamith sadeepa Linkedin Profile"
+              />
+            </a>
+  
+            <a href="https://www.facebook.com/profile.php?id=100008457066600"
+            target="_blank"
+              ><img
+                class="social-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/600px-Facebook_Logo_%282019%29.png"
+                alt="Chamith sadeepa Facebook Profile"
+            /></a>
+  
+            <a href=""
+              ><img
+                class="social-icon"
+                src="https://static.vecteezy.com/system/resources/previews/017/743/717/non_2x/instagram-icon-logo-free-png.png"
+                alt="Chamith sadeepa Insta Profile"
+              />
+            </a>
+            <a href="https://github.com/ChamithSkulathunga" target="_blank">
+              <img
+                class="social-icon"
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                alt="Chamith sadeepa GitHub Profile"
+              />
+            </a>
+          </div>
+
+          
+          </div>
+
+          <div>
+            <img
+            alt="Chamith Sadeepa"
+            title="Chamith sadeepa"
+            src="https://scontent.fcmb10-1.fna.fbcdn.net/v/t39.30808-1/409185731_3343684055923464_6962000559907983275_n.jpg?stp=dst-jpg_p240x240&_nc_cat=100&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeHpGbv50S5sGm4oON-IQdrpGvkel5ejPBQa-R6Xl6M8FIqpxUWeiIX38rs44p28Pu2t10LYB-gEqm0fQa6rhVoI&_nc_ohc=eRjqnZkpqu4AX9L19ms&_nc_ht=scontent.fcmb10-1.fna&oh=00_AfC6Y3Q1ol4NKGsujYzTkCFip9jIwVtl_DUcfPNEU_BaFg&oe=65BC7253"
+          />
+          </div>
+        </div>
+      </section>
+
+      <br>
+      <hr />
+
+      <section id="courseRegistration">
+        <h2>Course Registration</h2>
+        <p>
+          What you've to do is Just simply fill out the following form. You'll
+          get an email withing 5 working days
+        </p>
+
+       <div class="RegisterForm">
+          <form action="result.html" method="get" enctype="multipart/form-data">
+            
+            <div class="inputfild">
+              <div><label for="firstName"> First Name : </label></div>
+              <div><input id="firstName" type="text" name="firstName" /></div>
+            </div>
+
+            
+            <div class="inputfild">
+              <div><label for="email"> Email : </label></div>
+              <div><input id="email" type="email" name="email" /></div>
+            </div>
+
+            
+            <div class="inputfild">
+              <div><label for="phone"> Phone : </label></div>
+              <div><input id="phone" type="tel" name="phone" /></div>
+            </div>
+
+            
+            <div class="inputfild">
+              <div><label for="birthday"> Birthday : </label></div>
+              <div><input id="birthday" type="date" name="birthday" max="2024-01-19" /></div>
+            </div>
+
+            
+            
+            <div class="inputfild">
+              <div><label for="Your Knowlege"> Your Knowlege : </label></div>
+              <div><select id="Your Knowlege" name="Your Knowlege" multiple>
+                <option value="basic" label="Basic"></option>
+                <option value="average">Average</option>
+                <option value="good">Good</option>
+                <option value="best">Best</option>
+              </select></div>
+            </div>
+
+            <div class="inputfild">
+              <div><label for="resume"> Resume :</label></div>
+              <div><input id="resume" type="file" name="resume" /></div>
+            </div>
+            <div>
+
+
+            <div class="mainbtn">
+              <button type="submit">Submit</button>
+              <button id="resetButton" type="reset">Reset</button>
+            </div>
+          </form>
+       </div>
+      </section>
+     
+
+    </div>
+
+    <!-- <div style="background-color: blueviolet; padding: 20px">
+      <div style="background-color: chocolate; height: 200px"></div>
+    </div>
+
+    <div
+      style="
+        background-color: blueviolet;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+      "
+    >
+      <div style="background-color: chocolate; height: 200px"></div>
+    </div>
+
+    <div style="background-color: blueviolet; padding: 20px">
+      <div style="background-color: chocolate; height: 200px"></div>
+    </div> -->
+  </body>
+</html>
